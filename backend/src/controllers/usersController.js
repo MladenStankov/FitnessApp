@@ -35,3 +35,10 @@ export async function updateUserAgeByID(id, age) {
     const result = await pool.query("UPDATE users SET age = ? WHERE id = ?", [age, id])
     return result
 }
+
+//DELETE
+
+export async function deleteUserByID(id) {
+    const result = await pool.query("DELETE FROM users WHERE id = ?", [id])
+    return result;
+}
