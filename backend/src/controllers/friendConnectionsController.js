@@ -3,7 +3,7 @@ import pool from "../database/database.js"
 //GET
 
 export async function getFriendConnections() {
-    const [result] = await pool.query("SELECT * FROM friend_conections")
+    const [result] = await pool.query("SELECT * FROM friend_connections")
     return [result]
 }
 
