@@ -17,6 +17,11 @@ export async function getUserByEmail(email) {
     return result
 }
 
+export async function getUserPasswordByEmail(email) {
+    const result = await getUserByEmail(email)
+    return result.password
+}
+
 //POST
 export async function createUser(first_name, last_name, email, password, age, gender, weight, objective) {
     const result = await pool.query("INSERT INTO users (first_name, last_name, email, password, age, gender, weight, objective) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",

@@ -21,7 +21,7 @@ export async function createFriendConnection(user1_id, user2_id) {
 
 //DELETE
 
-export async function deleteFriendConnetionByIDs(user1_id, user2_id) {
+export async function deleteFriendConnectionByIDs(user1_id, user2_id) {
     const result = await pool.query("DELETE FROM friend_connections WHERE (user1_id = ? AND user2_id = ?) OR (user1_id = ? AND user2_id = ?)", [user1_id, user2_id, user2_id ,user1_id])
     return result
 }
