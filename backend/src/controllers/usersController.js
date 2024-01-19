@@ -8,13 +8,13 @@ export async function getUsers() {
 }
 
 export async function getUserByID(id) {
-    const result = await pool.query("SELECT * FROM users WHERE id = ?", id)
-    return result
+    const [result] = await pool.query("SELECT * FROM users WHERE id = ?", id)
+    return [result]
 }
 
 export async function getUserByEmail(email) {
-    const result = await pool.query("SELECT * FROM users WHERE email = ?", email)
-    return result
+    const [result] = await pool.query("SELECT * FROM users WHERE email = ?", email)
+    return [result]
 }
 
 export async function getUserPasswordByEmail(email) {
