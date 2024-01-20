@@ -5,7 +5,7 @@ import workoutsRoute from "./src/routes/workoutsRoute.js"
 import exercisesRoute from "./src/routes/exercisesRoute.js"
 import consumedCaloriesRoute from "./src/routes/consumedCaloriesRoute.js"
 
-const port = 5000
+const port = 3000
 const app = express()
 
 app.use(express.json())
